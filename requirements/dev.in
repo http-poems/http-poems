@@ -1,0 +1,4 @@
+-r base.in
+black>=23.1.0
+flake8>=6.0.0
+pip-tools>=6.12.3
