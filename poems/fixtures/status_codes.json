@@ -1,0 +1,570 @@
+[
+  {
+    "model": "poems.statuscode",
+    "pk": 1,
+    "fields": {
+      "code": 100,
+      "title": "Continue",
+      "group": 1,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/100"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "pk": 2,
+    "fields": {
+      "code": 101,
+      "title": "Switching Protocols",
+      "group": 1,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/101"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "pk": 3,
+    "fields": {
+      "code": 102,
+      "title": "Processing",
+      "group": 1,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/102"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 103,
+      "title": "Early Hints",
+      "group": 1,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/103"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 200,
+      "title": "OK",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 201,
+      "title": "Created",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 202,
+      "title": "Accepted",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 203,
+      "title": "Non-Authoritative Information",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/203"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 204,
+      "title": "No Content",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 205,
+      "title": "Reset Content",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/205"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 206,
+      "title": "Partial Content",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 207,
+      "title": "Multi-Status",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/207"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 208,
+      "title": "Already Reported",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/208"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 226,
+      "title": "IM Used (HTTP Delta encoding)",
+      "group": 2,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/226"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 300,
+      "title": "Multiple Choices",
+      "group": 3,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/300"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 301,
+      "title": "Moved Permanently",
+      "group": 3,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 302,
+      "title": "Found",
+      "group": 3,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 303,
+      "title": "See Other",
+      "group": 3,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/303"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 304,
+      "title": "Not Modified",
+      "group": 3,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 305,
+      "title": "Use Proxy Deprecated",
+      "group": 3
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 306,
+      "title": "unused",
+      "group": 3
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 307,
+      "title": "Temporary Redirect",
+      "group": 3,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/307"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 308,
+      "title": "Permanent Redirect",
+      "group": 3,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/308"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 400,
+      "title": "Bad Request",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 401,
+      "title": "Unauthorized",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 402,
+      "title": "Payment Required Experimental",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 403,
+      "title": "Forbidden",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 404,
+      "title": "Not Found",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 405,
+      "title": "Method Not Allowed",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 406,
+      "title": "Not Acceptable",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 407,
+      "title": "Proxy Authentication Required",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/407"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 408,
+      "title": "Request Timeout",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/408"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 409,
+      "title": "Conflict",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 410,
+      "title": "Gone",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/410"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 411,
+      "title": "Length Required",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/411"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 412,
+      "title": "Precondition Failed",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/412"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 413,
+      "title": "Payload Too Large",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 414,
+      "title": "URI Too Long",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/414"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 415,
+      "title": "Unsupported Media Type",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/415"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 416,
+      "title": "Range Not Satisfiable",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/416"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 417,
+      "title": "Expectation Failed",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/417"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 418,
+      "title": "I'm a teapot",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 421,
+      "title": "Misdirected Request",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/421"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 422,
+      "title": "Unprocessable Content (WebDAV)",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 423,
+      "title": "Locked (WebDAV)",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/423"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 424,
+      "title": "Failed Dependency (WebDAV)",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/424"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 425,
+      "title": "Too Early Experimental",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/425"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 426,
+      "title": "Upgrade Required",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/426"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 428,
+      "title": "Precondition Required",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/428"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 429,
+      "title": "Too Many Requests",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 431,
+      "title": "Request Header Fields Too Large",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/431"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 451,
+      "title": "Unavailable For Legal Reasons",
+      "group": 4,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/451"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 500,
+      "title": "Internal Server Error",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 501,
+      "title": "Not Implemented",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 502,
+      "title": "Bad Gateway",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 503,
+      "title": "Service Unavailable",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 504,
+      "title": "Gateway Timeout",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 505,
+      "title": "HTTP Version Not Supported",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/505"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 506,
+      "title": "Variant Also Negotiates",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/506"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 507,
+      "title": "Insufficient Storage (WebDAV)",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/507"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 508,
+      "title": "Loop Detected (WebDAV)",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/508"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 510,
+      "title": "Not Extended",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/510"
+    }
+  },
+  {
+    "model": "poems.statuscode",
+    "fields": {
+      "code": 511,
+      "title": "Network Authentication Required",
+      "group": 5,
+      "mdn_link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/511"
+    }
+  }
+]
