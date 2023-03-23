@@ -10,6 +10,8 @@ django==4.1.7
     # via djangorestframework
 djangorestframework==3.14.0
     # via -r requirements/base.in
+pillow==9.4.0
+    # via -r requirements/base.in
 psycopg2==2.9.5
     # via -r requirements/base.in
 python-decouple==3.8

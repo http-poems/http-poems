@@ -34,6 +34,7 @@ class Poet(models.Model):
     name = models.CharField(max_length=100, verbose_name=_("نام"))
     pseudonym = models.CharField(max_length=100, verbose_name=_("تخلص"))
     biography = models.TextField(max_length=1024, verbose_name=_("زندگینامه"))
+    avatar = models.ImageField(verbose_name=_("آواتار"), help_text=_("چهرک سراینده"))
     ganjoor_link = models.URLField(
         max_length=200,
         verbose_name=_("پیوند گنچور"),
