@@ -1,7 +1,6 @@
 [
   {
     "model": "poems.statuscode",
-    "pk": 1,
     "fields": {
       "code": 100,
       "title": "Continue",
@@ -11,7 +10,6 @@
   },
   {
     "model": "poems.statuscode",
-    "pk": 2,
     "fields": {
       "code": 101,
       "title": "Switching Protocols",
@@ -21,7 +19,6 @@
   },
   {
     "model": "poems.statuscode",
-    "pk": 3,
     "fields": {
       "code": 102,
       "title": "Processing",
