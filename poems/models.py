@@ -5,7 +5,7 @@ from poems.choices import StatusCodeGroupChoices
 
 
 class StatusCode(models.Model):
-    code = models.IntegerField(verbose_name=_("کد وضعیت"))
+    code = models.IntegerField(verbose_name=_("کد وضعیت"), unique=True)
     title = models.CharField(
         null=True, blank=False, max_length=32, verbose_name=_("عنوان")
     )
@@ -31,10 +31,21 @@ class StatusCode(models.Model):
 
 
 class Poet(models.Model):
-    name = models.CharField(max_length=100, verbose_name=_("نام"))
-    pseudonym = models.CharField(max_length=100, verbose_name=_("تخلص"))
-    biography = models.TextField(max_length=1024, verbose_name=_("زندگینامه"))
-    avatar = models.ImageField(verbose_name=_("آواتار"), help_text=_("چهرک سراینده"))
+    name = models.CharField(max_length=64, verbose_name=_("نام"))
+    fa_surname = models.CharField(
+        null=True, blank=False, max_length=32, verbose_name=_("تخلص")
+    )
+    en_surname = models.CharField(
+        null=True, blank=False, max_length=32, verbose_name=_("تخلص (انگلیسی)")
+    )
+    biography = models.TextField(null=True, blank=False, max_length=1024, verbose_name=_("زندگینامه"))
+    avatar = models.ImageField(
+        null=True,
+        blank=True,
+        upload_to="poets/avatars/",
+        verbose_name=_("آواتار"),
+        help_text=_("چهرک سراینده"),
+    )
     ganjoor_link = models.URLField(
         max_length=200,
         verbose_name=_("پیوند گنچور"),
@@ -56,6 +67,7 @@ class Poem(models.Model):
     )
     status_code = models.ForeignKey(
         StatusCode,
+        to_field="code",
         on_delete=models.CASCADE,
         verbose_name=_("کد وضعیت"),
         help_text=_("کد وضعیتی که این بیت سروده آن را توصیف می‌کند"),
