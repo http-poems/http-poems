@@ -22,7 +22,7 @@ class StatusCode(models.Model):
     )
 
     class Meta:
-        ordering = ("id",)
+        ordering = ("code",)
         verbose_name = _("کد وضعیت")
         verbose_name_plural = _("کد‌های وضعیت")
 
