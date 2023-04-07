@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from poems.choices import StatusCodeGroupChoices
+from poems.managers import RandomManager
 
 
 class StatusCode(models.Model):
@@ -77,6 +78,7 @@ class Poem(models.Model):
         verbose_name=_("پیوند گنچور"),
         help_text=_("پیوتد قطعه کامل سروده در وبسایت گنجور"),
     )
+    objects = RandomManager()
 
     class Meta:
         verbose_name = _("بیت سروده")

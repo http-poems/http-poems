@@ -1,0 +1,2 @@
+class SmallPopulationSize(Exception):
+    pass
