@@ -57,6 +57,9 @@ class Poet(models.Model):
         verbose_name = _("سراینده")
         verbose_name_plural = _("سرایندگان")
 
+    def __str__(self):
+        return self.fa_surname
+
 
 class Poem(models.Model):
     lyric = models.CharField(max_length=255, verbose_name=_("بیت سروده"))
@@ -83,3 +86,7 @@ class Poem(models.Model):
     class Meta:
         verbose_name = _("بیت سروده")
         verbose_name_plural = _("ابیات")
+
+    def __str__(self):
+        first_verse = self.lyric.split("\t")[0]
+        return first_verse
