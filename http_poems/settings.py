@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     # 3rd party apps
     "rest_framework",
     # local apps
-    "poems.apps.PoemsConfig",
+    "apps.poems.apps.PoemsConfig",
+    "apps.poets.apps.PoetsConfig",
+    "apps.status_codes.apps.StatusCodesConfig",
 ]
 
 MIDDLEWARE = [

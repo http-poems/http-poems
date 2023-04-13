@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from poems.models import StatusCode, Poet, Poem
+from apps.poems.models import Poem
+from apps.poets.models import Poet
+from apps.status_codes.models import StatusCode
 
 admin.site.register(Poem)
 

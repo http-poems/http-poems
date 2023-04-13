@@ -1,6 +1,8 @@
-from poems.models import StatusCode, Poet, Poem
+from apps.poems.models import Poem
+from apps.poets.models import Poet
+from apps.status_codes.models import StatusCode
 from rest_framework import viewsets
-from poems.serializers import StatusCodeSerializer, PoetSerializer, PoemSerializer
+from apps.poems.serializers import StatusCodeSerializer, PoetSerializer, PoemSerializer
 
 
 class StatusCodeViewSet(viewsets.ModelViewSet):

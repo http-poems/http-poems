@@ -1,4 +1,6 @@
-from poems.models import Poem, Poet, StatusCode
+from apps.poems.models import Poem
+from apps.poets.models import Poet
+from apps.status_codes.models import StatusCode
 from rest_framework import serializers
 
 

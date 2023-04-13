@@ -1,0 +1,13 @@
+[
+  {
+    "model": "poems.poet",
+    "fields": {
+      "name": "",
+      "fa_surname": "",
+      "en_surname": "",
+      "biography": "",
+      "avatar": "",
+      "ganjoor_link": ""
+    }
+  }
+]

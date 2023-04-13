@@ -3,7 +3,7 @@ from __future__ import division
 import math
 import random
 
-from poems.exceptions import SmallPopulationSize
+from apps.poems.exceptions import SmallPopulationSize
 
 
 def min_max(sample_size, min_id, max_id, rows_count):

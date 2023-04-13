@@ -1,8 +1,8 @@
 from django.db import models, transaction
 from django.db.models import Count, Max, Min
 
-from poems.exceptions import SmallPopulationSize
-from poems.utils import min_max, min_max_count
+from apps.poems.exceptions import SmallPopulationSize
+from apps.poems.utils import min_max, min_max_count
 
 
 class RandomQuerySet(models.query.QuerySet):

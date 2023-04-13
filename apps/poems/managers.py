@@ -1,6 +1,6 @@
 from django.db import models
 
-from poems.querysets import RandomQuerySet
+from apps.poems.querysets import RandomQuerySet
 
 
 class RandomManager(models.Manager):
