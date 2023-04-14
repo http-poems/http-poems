@@ -6,7 +6,7 @@ from apps.status_codes.choices import StatusCodeGroupChoices
 
 # Create your models here.
 class StatusCode(models.Model):
-    code = models.IntegerField(verbose_name=_("کد وضعیت"), unique=True)
+    code = models.IntegerField(verbose_name=_("کد وضعیت"), primary_key=True)
     title = models.CharField(
         null=True, blank=False, max_length=32, verbose_name=_("عنوان")
     )
