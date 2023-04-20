@@ -8,7 +8,7 @@ class Poet(models.Model):
         null=True, blank=False, max_length=32, verbose_name=_("تخلص")
     )
     en_surname = models.CharField(
-        unique=True, null=True, blank=False, max_length=32, verbose_name=_("تخلص (انگلیسی)")
+        unique=True, null=True, blank=False, max_length=32, verbose_name=_("تخلص (انگلیسی)"), editable=False
     )
     biography = models.TextField(null=True, blank=False, max_length=1024, verbose_name=_("زندگینامه"))
     avatar = models.ImageField(

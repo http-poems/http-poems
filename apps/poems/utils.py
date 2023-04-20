@@ -2,6 +2,7 @@ from __future__ import division
 
 import math
 import random
+import string
 
 from apps.poems.exceptions import SmallPopulationSize
 
@@ -30,3 +31,8 @@ def min_max_count(desired_sample_size, min_id, max_id, rows_count):
         raise SmallPopulationSize()
 
     return random.sample(population, actual_sample_size)
+
+
+def random_uid_generator(k: int = 8):
+    characters = string.ascii_lowercase + string.digits
+    return "".join(random.choices(characters, k=k))

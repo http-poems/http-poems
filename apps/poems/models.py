@@ -2,11 +2,13 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from apps.poems.managers import RandomManager
+from apps.poems.utils import random_uid_generator
 from apps.poets.models import Poet
 from apps.status_codes.models import StatusCode
 
 
 class Poem(models.Model):
+    uid = models.CharField(max_length=8, default=random_uid_generator, primary_key=True, editable=False)
     lyric = models.CharField(max_length=255, verbose_name=_("بیت سروده"))
     poet = models.ForeignKey(
         Poet,
@@ -14,6 +16,7 @@ class Poem(models.Model):
         on_delete=models.CASCADE,
         verbose_name=_("سراینده"),
         help_text=_("نام سراینده این بیت سروده"),
+        editable=False,
     )
     status_code = models.ForeignKey(
         StatusCode,
