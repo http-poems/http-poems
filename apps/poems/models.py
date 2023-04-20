@@ -10,6 +10,7 @@ class Poem(models.Model):
     lyric = models.CharField(max_length=255, verbose_name=_("بیت سروده"))
     poet = models.ForeignKey(
         Poet,
+        to_field="en_surname",
         on_delete=models.CASCADE,
         verbose_name=_("سراینده"),
         help_text=_("نام سراینده این بیت سروده"),

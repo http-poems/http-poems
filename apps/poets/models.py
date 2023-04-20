@@ -2,14 +2,13 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-# Create your models here.
 class Poet(models.Model):
     name = models.CharField(max_length=64, verbose_name=_("نام"))
     fa_surname = models.CharField(
         null=True, blank=False, max_length=32, verbose_name=_("تخلص")
     )
     en_surname = models.CharField(
-        null=True, blank=False, max_length=32, verbose_name=_("تخلص (انگلیسی)")
+        unique=True, null=True, blank=False, max_length=32, verbose_name=_("تخلص (انگلیسی)")
     )
     biography = models.TextField(null=True, blank=False, max_length=1024, verbose_name=_("زندگینامه"))
     avatar = models.ImageField(
