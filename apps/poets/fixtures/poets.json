@@ -1,6 +1,6 @@
 [
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "حکیم ابوالقاسم فردوسی",
       "fa_surname": "فردوسی",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "مولانا جلال\u200Cالدین محمد بلخی",
       "fa_surname": "مولانا",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "خواجه شمس الدین محمد حافظ شیرازی",
       "fa_surname": "حافظ",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "مشرف الدین مصلح بن عبدالله شیرازی",
       "fa_surname": "سعدی",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "فَریدالدّین ابوحامِد محمّد عطّار نِیشابوری",
       "fa_surname": "عطار",
@@ -55,7 +55,7 @@
     }
   },
   {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "حکیم ابومحمد الیاس بن یوسف بن زکی ابن مؤید نظامی",
       "fa_surname": "نظامی",
@@ -66,7 +66,7 @@
     }
   },
   {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "حکیم ابوالفتح عمر بن ابراهیم الخیامی",
       "fa_surname": "خیام",
@@ -77,7 +77,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "نورالدین عبدالرحمن ابن نظام الدین احمد ابن محمد",
       "fa_surname": "جامی",
@@ -88,7 +88,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "كمال\u200Cالدین\u200C بافقی\u200C",
       "fa_surname": "وحشی",
@@ -99,7 +99,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "ابونصر علی بن احمد اسدی توسی",
       "fa_surname": "اسدی توسی",
@@ -110,7 +110,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "ابوالمجد مجدود بن آدم سنایی غزنوی",
       "fa_surname": "سنایی",
@@ -121,7 +121,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "میرزا حبیب الله شیرازی",
       "fa_surname": "قاآنی",
@@ -132,7 +132,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "شیخ سعدالله مسیح پانی\u200Cپتی",
       "fa_surname": "ملا مسیح",
@@ -143,7 +143,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "افضل\u200Cالدّین بدیل\u200C بن علی خاقانی شروانی",
       "fa_surname": "خاقانی",
@@ -154,7 +154,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "رخشندهٔ اعتصامی",
       "fa_surname": "پروین اعتصامی",
@@ -165,7 +165,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "شاطرعباس صبوحی",
       "fa_surname": "شاطرعباس صبوحی",
@@ -176,7 +176,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "میرزا محمد علی صائب تبریزی",
       "fa_surname": "صائب تبریزی",
@@ -187,7 +187,7 @@
     }
   },
     {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "میرزا عباس فروغی بسطامی",
       "fa_surname": "فروغی بسطامی",
@@ -197,7 +197,7 @@
       "ganjoor_link": "https://ganjoor.net/forooghi"
     }
   },  {
-    "model": "poems.poet",
+    "model": "poets.poet",
     "fields": {
       "name": "فخرالدین اسعد گرگانی",
       "fa_surname": "فخرالدین اسعد گرگانی",

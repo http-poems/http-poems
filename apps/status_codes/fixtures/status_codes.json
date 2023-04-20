@@ -1,6 +1,6 @@
 [
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 100,
       "title": "Continue",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 101,
       "title": "Switching Protocols",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 102,
       "title": "Processing",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 103,
       "title": "Early Hints",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 200,
       "title": "OK",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 201,
       "title": "Created",
@@ -54,7 +54,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 202,
       "title": "Accepted",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 203,
       "title": "Non-Authoritative Information",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 204,
       "title": "No Content",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 205,
       "title": "Reset Content",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 206,
       "title": "Partial Content",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 207,
       "title": "Multi-Status",
@@ -108,7 +108,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 208,
       "title": "Already Reported",
@@ -117,7 +117,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 226,
       "title": "IM Used (HTTP Delta encoding)",
@@ -126,7 +126,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 300,
       "title": "Multiple Choices",
@@ -135,7 +135,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 301,
       "title": "Moved Permanently",
@@ -144,7 +144,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 302,
       "title": "Found",
@@ -153,7 +153,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 303,
       "title": "See Other",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 304,
       "title": "Not Modified",
@@ -171,7 +171,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 305,
       "title": "Use Proxy Deprecated",
@@ -179,7 +179,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 306,
       "title": "unused",
@@ -187,7 +187,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 307,
       "title": "Temporary Redirect",
@@ -196,7 +196,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 308,
       "title": "Permanent Redirect",
@@ -205,7 +205,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 400,
       "title": "Bad Request",
@@ -214,7 +214,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 401,
       "title": "Unauthorized",
@@ -223,7 +223,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 402,
       "title": "Payment Required Experimental",
@@ -232,7 +232,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 403,
       "title": "Forbidden",
@@ -241,7 +241,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 404,
       "title": "Not Found",
@@ -250,7 +250,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 405,
       "title": "Method Not Allowed",
@@ -259,7 +259,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 406,
       "title": "Not Acceptable",
@@ -268,7 +268,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 407,
       "title": "Proxy Authentication Required",
@@ -277,7 +277,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 408,
       "title": "Request Timeout",
@@ -286,7 +286,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 409,
       "title": "Conflict",
@@ -295,7 +295,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 410,
       "title": "Gone",
@@ -304,7 +304,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 411,
       "title": "Length Required",
@@ -313,7 +313,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 412,
       "title": "Precondition Failed",
@@ -322,7 +322,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 413,
       "title": "Payload Too Large",
@@ -331,7 +331,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 414,
       "title": "URI Too Long",
@@ -340,7 +340,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 415,
       "title": "Unsupported Media Type",
@@ -349,7 +349,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 416,
       "title": "Range Not Satisfiable",
@@ -358,7 +358,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 417,
       "title": "Expectation Failed",
@@ -367,7 +367,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 418,
       "title": "I'm a teapot",
@@ -376,7 +376,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 421,
       "title": "Misdirected Request",
@@ -385,7 +385,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 422,
       "title": "Unprocessable Content (WebDAV)",
@@ -394,7 +394,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 423,
       "title": "Locked (WebDAV)",
@@ -403,7 +403,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 424,
       "title": "Failed Dependency (WebDAV)",
@@ -412,7 +412,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 425,
       "title": "Too Early Experimental",
@@ -421,7 +421,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 426,
       "title": "Upgrade Required",
@@ -430,7 +430,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 428,
       "title": "Precondition Required",
@@ -439,7 +439,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 429,
       "title": "Too Many Requests",
@@ -448,7 +448,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 431,
       "title": "Request Header Fields Too Large",
@@ -457,7 +457,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 451,
       "title": "Unavailable For Legal Reasons",
@@ -466,7 +466,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 500,
       "title": "Internal Server Error",
@@ -475,7 +475,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 501,
       "title": "Not Implemented",
@@ -484,7 +484,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 502,
       "title": "Bad Gateway",
@@ -493,7 +493,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 503,
       "title": "Service Unavailable",
@@ -502,7 +502,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 504,
       "title": "Gateway Timeout",
@@ -511,7 +511,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 505,
       "title": "HTTP Version Not Supported",
@@ -520,7 +520,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 506,
       "title": "Variant Also Negotiates",
@@ -529,7 +529,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 507,
       "title": "Insufficient Storage (WebDAV)",
@@ -538,7 +538,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 508,
       "title": "Loop Detected (WebDAV)",
@@ -547,7 +547,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 510,
       "title": "Not Extended",
@@ -556,7 +556,7 @@
     }
   },
   {
-    "model": "poems.statuscode",
+    "model": "status_codes.statuscode",
     "fields": {
       "code": 511,
       "title": "Network Authentication Required",
