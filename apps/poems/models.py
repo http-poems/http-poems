@@ -8,27 +8,25 @@ from apps.status_codes.models import StatusCode
 
 
 class Poem(models.Model):
-    uid = models.CharField(max_length=8, default=random_uid_generator, primary_key=True, editable=False)
-    lyric = models.CharField(max_length=255, verbose_name=_("بیت سروده"))
+    uid = models.CharField(primary_key=True, max_length=8, default=random_uid_generator, editable=False)
+    lyric = models.TextField(max_length=256, null=False, blank=False, verbose_name=_("سروده"))
     poet = models.ForeignKey(
         Poet,
-        to_field="en_surname",
         on_delete=models.CASCADE,
         verbose_name=_("سراینده"),
-        help_text=_("نام سراینده این بیت سروده"),
-        editable=False,
+        help_text=_("سراینده این سروده"),
     )
     status_code = models.ForeignKey(
         StatusCode,
         to_field="code",
         on_delete=models.CASCADE,
         verbose_name=_("کد وضعیت"),
-        help_text=_("کد وضعیتی که این بیت سروده آن را توصیف می‌کند"),
+        help_text=_("کد وضعیتی که این سروده آن را توصیف می‌کند"),
     )
     ganjoor_link = models.URLField(
         max_length=200,
         verbose_name=_("پیوند گنچور"),
-        help_text=_("پیوتد قطعه کامل سروده در وبسایت گنجور"),
+        help_text=_("پیوتد سروده در وبسایت گنجور"),
     )
     objects = RandomManager()
 
