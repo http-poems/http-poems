@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from apps.poems.views import RandomPoemRetrieveAPIView, StatusCodeBasedPoemListAPIView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("<code>", RandomPoemRetrieveAPIView.as_view(), name="random-poem-retrieve"),
+    path("<code>/poems", StatusCodeBasedPoemListAPIView.as_view(), name="status-code-poems-list"),
+    path("poems/", include("apps.poems.urls"), name="poems"),
+    path("poets/", include("apps.poets.urls"), name="poets"),
+    path("status_codes/", include("apps.status_codes.urls"), name="status_codes"),
 ]
