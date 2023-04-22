@@ -12,18 +12,4 @@ class StatusCodeListAPIView(generics.ListAPIView):
 class StatusCodeRetrieveAPIView(generics.RetrieveAPIView):
     queryset = StatusCode.objects.all()
     serializer_class = StatusCodeSerializer
-
-
-class StatusCodeCreateAPIView(generics.CreateAPIView):
-    queryset = StatusCode.objects.all()
-    serializer_class = StatusCodeSerializer
-
-
-class StatusCodeDestroyAPIView(generics.DestroyAPIView):
-    queryset = StatusCode.objects.all()
-    serializer_class = StatusCodeSerializer
-
-
-class StatusCodeUpdateAPIView(generics.UpdateAPIView):
-    queryset = StatusCode.objects.all()
-    serializer_class = StatusCodeSerializer
+    lookup_field = "code"
