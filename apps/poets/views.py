@@ -4,6 +4,12 @@ from apps.poets.serializers import PoetSerializer
 from apps.poets.models import Poet
 
 
-class StatusCodeListAPIView(generics.ListAPIView):
+class PoetListAPIView(generics.ListAPIView):
     queryset = Poet.objects.all()
     serializer_class = PoetSerializer
+
+
+class PoetRetrieveAPIView(generics.RetrieveAPIView):
+    queryset = Poet.objects.all()
+    serializer_class = PoetSerializer
+    lookup_field = "id"
