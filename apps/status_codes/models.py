@@ -6,14 +6,18 @@ from apps.status_codes.choices import StatusCodeGroupChoices
 
 # Create your models here.
 class StatusCode(models.Model):
-    code = models.IntegerField(verbose_name=_("کد وضعیت"), primary_key=True, editable=False)
+    code = models.IntegerField(
+        verbose_name=_("کد وضعیت"), primary_key=True, editable=False
+    )
     title = models.CharField(
         null=True, blank=False, max_length=32, verbose_name=_("عنوان")
     )
     group = models.PositiveSmallIntegerField(
         choices=StatusCodeGroupChoices.choices, verbose_name=_("گروه پاسخ")
     )
-    description = models.TextField(null=True, blank=True, verbose_name=_("توضیحات"))
+    description = models.TextField(
+        null=True, blank=True, verbose_name=_("توضیحات")
+    )
     mdn_link = models.URLField(
         null=True,
         blank=True,

@@ -8,8 +8,12 @@ from apps.status_codes.models import StatusCode
 
 
 class Poem(models.Model):
-    uid = models.CharField(max_length=8, default=random_uid_generator, unique=True, editable=False)
-    lyric = models.TextField(max_length=256, null=False, blank=False, verbose_name=_("سروده"))
+    uid = models.CharField(
+        max_length=8, default=random_uid_generator, unique=True, editable=False
+    )
+    lyric = models.TextField(
+        max_length=256, null=False, blank=False, verbose_name=_("سروده")
+    )
     poet = models.ForeignKey(
         Poet,
         on_delete=models.CASCADE,
