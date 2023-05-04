@@ -18,7 +18,9 @@ class RandomQuerySet(models.query.QuerySet):
             if aggregates["count"] <= amount:
                 return self.all()
 
-            if (aggregates["max_id"] - aggregates["min_id"]) + 1 == aggregates["count"]:
+            if (aggregates["max_id"] - aggregates["min_id"]) + 1 == aggregates[
+                "count"
+            ]:
                 return self.filter(
                     id__in=min_max(
                         amount,

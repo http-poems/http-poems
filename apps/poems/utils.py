@@ -27,7 +27,9 @@ def min_max_count(desired_sample_size, min_id, max_id, rows_count):
     )
     actual_sample_size *= 10
 
-    if actual_sample_size >= rows_count or actual_sample_size > len(population):
+    if actual_sample_size >= rows_count or actual_sample_size > len(
+        population
+    ):
         raise SmallPopulationSize()
 
     return random.sample(population, actual_sample_size)

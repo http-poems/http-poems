@@ -11,5 +11,6 @@ class PoemModelAdmin(admin.ModelAdmin):
     def poem_ganjoor_link(self, obj):
         if obj.ganjoor_link:
             return format_html(
-                "<a href='{url}' target='_blank'>{url}</a>", url=obj.ganjoor_link
+                "<a href='{url}' target='_blank'>{url}</a>",
+                url=obj.ganjoor_link,
             )

@@ -3,10 +3,23 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Poet(models.Model):
-    id = models.CharField(primary_key=True, max_length=32, verbose_name=_("تخلص (انگلیسی)"), editable=False)
-    name = models.CharField(max_length=64, null=True, blank=False, verbose_name=_("نام"))
-    surname = models.CharField(max_length=32, verbose_name=_("تخلص"), help_text=_("چیزی که سراینده بدان ملقب است."))
-    biography = models.TextField(null=True, blank=False, max_length=1024, verbose_name=_("زندگینامه"))
+    id = models.CharField(
+        primary_key=True,
+        max_length=32,
+        verbose_name=_("تخلص (انگلیسی)"),
+        editable=False,
+    )
+    name = models.CharField(
+        max_length=64, null=True, blank=False, verbose_name=_("نام")
+    )
+    surname = models.CharField(
+        max_length=32,
+        verbose_name=_("تخلص"),
+        help_text=_("چیزی که سراینده بدان ملقب است."),
+    )
+    biography = models.TextField(
+        null=True, blank=False, max_length=1024, verbose_name=_("زندگینامه")
+    )
     avatar = models.ImageField(
         null=True,
         blank=True,
