@@ -8,7 +8,7 @@ from apps.status_codes.views import (
 urlpatterns = [
     path("", StatusCodeListAPIView.as_view(), name="status-code-list"),
     path(
-        "<code>",
+        "<int:code>",
         StatusCodeRetrieveAPIView.as_view(),
         name="status-code-retrieve",
     ),

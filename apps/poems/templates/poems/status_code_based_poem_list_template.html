@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1>Poems based on Status Code</h1>
+<ul>
+    {% for poem in data %}
+        <p>uid: {{ poem.uid }}</p>
+        <p>lyric: {{ poem.lyric }}</p>
+        <p>ganjoor_link: {{ poem.ganjoor_link }}</p>
+        <p>poet: <a href={{ poem.poet.poet_client_link }}>{{ poem.poet.surname }}</a></p>
+        <p>status code: <a href={{ poem.status_code.status_code_client_link }}>{{ poem.status_code.code }}</a></p>
+        <hr>
+    {% endfor %}
+</ul>
+</body>
+</html>

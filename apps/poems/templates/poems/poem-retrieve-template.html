@@ -1,0 +1,12 @@
+<html>
+<h1>Poem Retrieve Client View</h1>
+<body>
+<ul>
+    <p>poem uid: {{ data.uid }}</p>
+    <p>poem lyric: {{ data.lyric }}</p>
+    <p><a href={{ data.ganjoor_link }}>ganjoor link</a></p>
+    <p>poet: <a href={{ data.poet.poet_client_link }}>{{ data.poet.surname }}</a></p>
+    <p>status code: <a href={{ data.status_code.status_code_client_link }}>{{ data.status_code.code }}</a></p>
+</ul>
+</body>
+</html>

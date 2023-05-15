@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>Poems List</h1>
+<ul>
+    {% for poet in data %}
+        <p>poet id: {{ poet.id }}</p>
+        <p>poet name: {{ poet.name }}</p>
+        <p>poet surname: {{ poet.surname }}</p>
+        <p>poet biography: {{ poet.biography }}</p>
+        <p>poet avatar</p>
+        <img src="{{ poet.avatar }}">
+        <p><a href={{ poet.ganjoor_link }}>ganjoor link</a></p>
+        <hr>
+    {% endfor %}
+</ul>
+</body>
+</html>

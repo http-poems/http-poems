@@ -33,3 +33,7 @@ class StatusCode(models.Model):
 
     def __str__(self):
         return f"({self.title}) {self.code}"
+
+    @property
+    def group_label(self):
+        return StatusCodeGroupChoices(self.group).label
