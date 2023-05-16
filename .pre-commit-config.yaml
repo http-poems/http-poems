@@ -26,7 +26,7 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v4.4.0
     hooks:
       # See https://pre-commit.com/hooks.html for more hooks
       - id: check-merge-conflict # checks for files that contain merge conflict strings.
@@ -106,7 +106,7 @@ repos:
 
 
   - repo: https://github.com/pycqa/flake8
-    rev: 5.0.0
+    rev: 6.0.0
     hooks:
       - id: flake8
         args: [ --config, setup.cfg ]
