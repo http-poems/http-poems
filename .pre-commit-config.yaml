@@ -30,28 +30,17 @@ repos:
     hooks:
       # See https://pre-commit.com/hooks.html for more hooks
       - id: check-merge-conflict # checks for files that contain merge conflict strings.
-        stages: [ push ]
       - id: check-executables-have-shebangs # ensures that (non-binary) executables have a shebang.
-        stages: [ push ]
       - id: check-shebang-scripts-are-executable # ensures that (non-binary) files with a shebang are executable.
-        stages: [ push ]
       - id: check-added-large-files # prevents giant files from being committed.
         args: [ '--maxkb=1000' ]
-        stages: [ push ]
       - id: debug-statements # Check for debugger imports and py37+ `breakpoint()` calls in python source.
-        stages: [ push ]
       - id: detect-private-key # Detects the presence of private keys.
-        stages: [ push ]
       - id: end-of-file-fixer # Makes sure files end in a newline and only a newline.
-        stages: [ push ]
       - id: check-ast  # Simply checks whether the files parse as valid python.
-        stages: [ push ]
-      - id: check-json # Checks json files and verifies them
-        stages: [ push ]
+      - id: check-json # Checks json files and verifies them.
       - id: check-yaml # Checks yaml files for parseable syntax.
-        stages: [ push ]
       - id: check-toml # Attempts to load all TOML files to verify syntax.
-        stages: [ push ]
 
 
   - repo: local
@@ -60,36 +49,36 @@ repos:
       - id: django-check
         name: django-check
         description: Check django project for potential problems
-        entry: sh -c 'python manage.py check'
+        entry: sh -c 'cp env.ci .env && python manage.py check'
+        additional_dependencies: [django, python-decouple]
         types:
           - python
         pass_filenames: false
-        language: system
-        stages: [ push ]
+        language: python
 
 
       - id: django-check-migrations
         name: django-check-migrations
         description: Check django project for missing migrations.
-        entry: sh -c 'python manage.py makemigrations --check --dry-run'
+        entry: sh -c 'cp env.ci .env && python manage.py makemigrations --check --dry-run'
+        additional_dependencies: [django, python-decouple]
         files: models.py
         types:
           - python
         pass_filenames: false
-        language: system
-        stages: [ push ]
-
+        language: python
 
 
       - id: django-test
         name: django-test
         description: Check running tests and failure of them
-        entry: sh -c 'coverage run manage.py test --noinput && coverage report --fail-under 0'
+        entry: sh -c 'cp env.ci .env && coverage run manage.py test --noinput && coverage report --fail-under 0'
+        additional_dependencies: [django, python-decouple, coverage]
         types:
           - python
         pass_filenames: false
-        language: system
-        stages: [ push ]
+        language: python
+
 
   - repo: https://github.com/asottile/setup-cfg-fmt
     rev: "v2.2.0"
