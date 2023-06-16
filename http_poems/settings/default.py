@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "apps.poems.apps.PoemsConfig",
     "apps.poets.apps.PoetsConfig",
     "apps.status_codes.apps.StatusCodesConfig",
+    "apps.utils.apps.UtilsConfig",
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,21 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "HOST": config("DB_HOST"),
+        "PORT": config("DB_PORT"),
+        "NAME": config("DB_NAME"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASSWORD"),
+    },
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

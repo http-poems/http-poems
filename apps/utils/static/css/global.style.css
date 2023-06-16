@@ -1,0 +1,263 @@
+/* Fonts */
+
+@font-face {
+  font-family: Vazir;
+  src: url("../assets/fonts/vazir/Vazir.eot");
+  src: url("../assets/fonts/vazir/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/vazir/Vazir.woff") format("woff"),
+    url("../assets/fonts/vazir/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../assets/fonts/vazir/Vazir-Bold.eot");
+  src: url("../assets/fonts/vazir/Vazir-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/vazir/Vazir-Bold.woff") format("woff"),
+    url("../assets/fonts/vazir/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+/* Color Palette */
+
+:root {
+  --white: #fffefe;
+  --HP-50: #ffefde;
+  --HP-100: #ffdab1;
+  --HP-200: #f5c186;
+  --HP-300: #cf9c65;
+  --HP-400: #ca863d;
+  --HP-500: #bf7424;
+  --HP-600: #b05f07;
+  --HP-700: #7d4303;
+  --HP-800: #572e02;
+  --HP-900: #211100;
+  --gray-50: #eee6de;
+  --gray-100: #d3cbc2;
+  --gray-200: #beb3a6;
+  --gray-300: #a3988e;
+  --gray-400: #92857b;
+  --gray-500: #786d65;
+  --gray-600: #5b534e;
+  --gray-700: #37302c;
+  --gray-800: #25211f;
+  --gray-900: #181715;
+}
+
+/* Text Styles */
+
+.content-xs {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+.content-sm {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+.content-base {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+.content-md {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+.content-lg {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+.content-xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+.content-2xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+.content-3xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+}
+.content-4xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.title-xs {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+}
+.title-sm {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+.title-base {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+.title-md {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
+.title-lg {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+.title-xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+.title-2xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+}
+.title-3xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+}
+.title-4xl {
+  font-family: "Vazir", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+/* Button Size Classes */
+
+.btn-lg {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid;
+  font-size: 1.125rem;
+}
+.btn-md {
+  padding: 0.25rem 1.25rem;
+  border: 1.5px solid;
+  font-size: 1rem;
+}
+.btn-sm {
+  padding: 0.1rem 1rem;
+  border: 1px solid;
+  font-size: 0.875rem;
+}
+
+/* Button Color Variants */
+
+.btn-prm {
+  background-color: var(--HP-500);
+  border-color: var(--HP-500);
+  color: white;
+}
+.btn-prm:hover {
+  background-color: var(--HP-600);
+}
+.btn-prm.disabled {
+  background-color: var(--gray-400);
+  color: var(--gray-50);
+}
+
+.btn-scn {
+  background-color: var(--HP-800);
+  color: white;
+}
+.btn-scn:hover {
+  background-color: var(--HP-900);
+}
+.btn-scn.disabled {
+  background-color: var(--gray-700);
+  color: var(--gray-500);
+}
+
+.btn-out {
+  background-color: transparent;
+  color: var(--HP-600);
+  border-color: var(--HP-600);
+}
+.btn-out:hover {
+  color: var(--HP-700);
+  border-color: var(--HP-700);
+}
+.btn-out.disabled {
+  background-color: var(--gray-100);
+  color: var(--gray-500);
+  border-color: var(--gray-500);
+}
+
+/* Inout Styles */
+
+.input-lg {
+  padding: 0.5rem;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--HP-600);
+}
+
+.input-md {
+  padding: 0.25rem;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1.5px solid var(--HP-600);
+}
+
+.input-sm {
+  padding: 0.125rem;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--HP-600);
+}
+
+input:hover,
+input:focus,
+input:active {
+  border-color: var(--HP-700);
+}
+
+input:disabled {
+  border-color: var(--gray-600);
+  color: var(--gray-600);
+  background-color: var(--gray-50);
+}
+
+/* Direction Styles */
+
+.dir-rtl {
+  direction: rtl;
+}
+
+.dir-ltr {
+  direction: ltr;
+}
