@@ -184,5 +184,7 @@ modules.xml
 .ionide
 
 ### Django Project ###
-
 media/
+
+### Mac Files ###
+.DS_Store
