@@ -13,10 +13,10 @@ Including another URLconf
     1. Import the `include()` function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import path, include
 
 from apps.poems.client_views import (
     RandomPoemRetrieveClientView,
@@ -26,18 +26,27 @@ from apps.poems.views import (
     RandomPoemRetrieveAPIView,
     StatusCodeBasedPoemListAPIView,
 )
+from apps.status_codes.views.client import (
+    HomePageView,
+    StatusCodeRetrieveClientView,
+)
 
 urlpatterns = [
+    path(
+        "",
+        HomePageView.as_view(),
+        name="status-code-list-template",
+    ),
+    path(
+        "<int:code>",
+        StatusCodeRetrieveClientView.as_view(),
+        name="status-code-retrieve-template",
+    ),
     path("admin/", admin.site.urls),
     path("poems/", include("apps.poems.client_urls"), name="poems-client"),
     path("poets/", include("apps.poets.client_urls"), name="poets-client"),
     path(
-        "status-codes/",
-        include("apps.status_codes.client_urls"),
-        name="status_codes-client",
-    ),
-    path(
-        "<int:code>",
+        "<int:code>/random",
         RandomPoemRetrieveClientView.as_view(),
         name="random-poem-retrieve-client",
     ),

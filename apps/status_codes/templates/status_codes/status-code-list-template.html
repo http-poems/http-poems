@@ -1,15 +1,227 @@
-<html>
-<body>
-<h1>Status Codes List</h1>
-<ul>
-    {% for item in data %}
-        <p>status code : {{ item.code }}</p>
-        <p>status-code title : {{ item.title }}</p>
-        <p>status-code group : {{ item.group }}</p>
-        <p>status code : {{ item.description }}</p>
-        <p><a href={{ item.mdn_link }}>mdn link</a></p>
-        <hr>
-    {% endfor %}
-</ul>
-</body>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وضعیت‌نامه</title>
+    <link rel="stylesheet" href="{% static 'css/global.style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/shared.style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-logo-and-nav">
+            <div id="nav-icon1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <nav class="header-mobile-nav" id="header-mobile-nav">
+              <ul class="nav-mobile-list">
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">صفحه اصلی</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">وضعیت‌های HTTP</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">نحوه استفاده</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">درباره ما</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header-img">
+              <img src="../assets/images/logo-48.png" alt="Vaziatnameh Logo" />
+            </div>
+            <h1 class="header-title title-2xl">وضعیت‌نامه</h1>
+            <nav class="header-desktop-nav">
+              <ul class="nav-bar-list">
+                <li class="content-lg nav-item">
+                  <a href="#">صفحه اصلی</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">وضعیت‌های HTTP</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">نحوه استفاده</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">درباره ما</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <a href="../suggestpage/index.html">
+            <button class="btn-out btn-lg header-btn">پیشنهاد شعر</button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="container banner-section">
+          <div class="banner-right">
+            <h2 class="title-3xl banner-h2">وضعیت HTTP بده، شعر مرتبط بگیر!</h2>
+            <p class="content-base banner-description">
+              با سرویس وضعیت‌نامه میتونی به ازای وضعیت های مختلف http، شعر های
+              فارسی مرتبط با اون وضعیت رو دریافت کنی.
+            </p>
+            <a href="../suggestpage/index.html">
+              <button class="btn-prm btn-lg banner-btn">
+                شعر پیشنهادی خودت رو برامون بفرست >
+              </button>
+            </a>
+          </div>
+          <div class="banner-left">
+            <img src="../assets/images/main-banner.jpeg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container how-to-use-section">
+          <h4 class="title-2xl">نحوه استفاده</h4>
+          <div class="how-to-use-item">
+            <p>
+              با استفاده از این url میتونی یک شعر تصادفی مربوط به وضعیت مورد
+              نظرت دریافت کنی.
+            </p>
+            <div>
+              <input
+                type="text"
+                value="https://http.poems/[status]"
+                class="input-lg how-to-use-input dir-ltr"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="how-to-use-item">
+            <p>
+              همچنین برای دریافت یه شعر خاص مربوط به یه استاتوس میتونی با استفاده از id
+              اون شعر به صورت زیر دریافتش کنی.
+            </p>
+            <div>
+              <input
+                type="text"
+                value="https://http.poems/[status]/[uid]"
+                class="input-lg how-to-use-input dir-ltr"
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container cards-section">
+          <h4 class="title-2xl">وضعیت‌های HTTP</h4>
+          <div class="cards-grid">
+           {% for card in cards %}
+            <div class="main-card-container">
+              <div class="main-card">
+                <a href="../statuspage/index.html">
+                  <p class="content-md poem-item">
+                      {{ card.lyric }}
+                  </p>
+                  <div class="card-poet-name">
+                    <p>{{ card.poet_name }}</p>
+                  </div>
+                  <div class="card-info">
+                    <p class="title-base">{{ card.status_code }}</p>
+                    <p class="title-base">{{ card.status_code_title }}</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+           {% endfor %}
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container contributers">
+          <h4 class="title-2xl">مشارکت کنندگان</h4>
+          <div class="contributers-profiles">
+           {% for contributor in contributors %}
+            <a
+              href={{ contributor.html_url }}
+              target="_blank"
+              class="profile-img"
+            >
+              <img src={{ contributor.avatar_url }} alt="" />
+            </a>
+           {% endfor %}
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div class="footer-left">
+          <div class="footer-img">
+            <img
+              src="../assets/images/logo-white-48.png"
+              alt="Vaziatnameh Logo"
+            />
+          </div>
+          <p class="content-sm">
+            Made with ♥ by
+            <a
+              href="https://github.com/javadnikbakht"
+              target="_blank"
+              class="title-sm"
+              >@JavadNikbakht</a
+            >
+            &
+            <a
+              href="https://github.com/alieabbasi"
+              target="_blank"
+              class="title-sm"
+              >@alieabbasi</a
+            >
+            .
+          </p>
+        </div>
+        <div class="footer-right">
+          <a href="#" class="footer-social-item">
+            <img src="../assets/images/linkedin.svg" alt="" />
+          </a>
+          <a href="#" class="footer-social-item">
+            <img src="../assets/images/twitter.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function menuToggler() {
+        document.getElementById("nav-icon1").classList.toggle("open");
+        document.getElementById("header-mobile-nav").classList.toggle("open");
+        document.body.classList.toggle("fixed-position");
+      }
+      document
+        .getElementById("nav-icon1")
+        .addEventListener("click", menuToggler);
+
+      const cards = document.querySelectorAll(".main-card");
+      const force = 80;
+      for (let card of cards) {
+        card.addEventListener("mousemove", function (e) {
+          const boundings = card.getBoundingClientRect();
+          const offsetX =
+            -(e.clientX - boundings.left - boundings.width / 2) / force / 3;
+          const offsetY =
+            (e.clientY - boundings.top - boundings.height / 2) / force;
+          // console.log(boundings.height / 2, e.clientY - boundings.top)
+          card.style.transform = `rotateX(${offsetY}deg) rotateY(${offsetX}deg)`;
+        });
+
+        card.addEventListener("mouseleave", function(e) {
+          card.style.transform = "rotateX(0) rotateY(0)"
+        })
+      }
+    </script>
+  </body>
 </html>

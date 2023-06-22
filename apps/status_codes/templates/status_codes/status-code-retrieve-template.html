@@ -1,12 +1,210 @@
-<html>
-<h1>Status Code Retrieve Client View</h1>
-<body>
-<ul>
-    <p>status code : {{ data.code }}</p>
-    <p>status-code title : {{ data.title }}</p>
-    <p>status-code group : {{ data.group }}</p>
-    <p>status code : {{ data.description }}</p>
-    <p><a href={{ data.mdn_link }}>mdn link</a></p>
-</ul>
-</body>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وضعیت نامه | وضعیت {{ status_code.code }}</title>
+    <link rel="stylesheet" href="{% static 'css/global.style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/shared.style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/statuspage.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/toastify.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-logo-and-nav">
+            <div id="nav-icon1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <nav class="header-mobile-nav" id="header-mobile-nav">
+              <ul class="nav-mobile-list">
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">صفحه اصلی</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">وضعیت‌های HTTP</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">نحوه استفاده</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">درباره ما</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header-img">
+              <img src="../assets/images/logo-48.png" alt="Vaziatnameh Logo" />
+            </div>
+            <h1 class="header-title title-2xl">وضعیت‌نامه</h1>
+            <nav class="header-desktop-nav">
+              <ul class="nav-bar-list">
+                <li class="content-lg nav-item">
+                  <a href="#">صفحه اصلی</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">وضعیت‌های HTTP</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">نحوه استفاده</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">درباره ما</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <a href="../suggestpage/index.html">
+            <button class="btn-out btn-lg header-btn">پیشنهاد شعر</button>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="status-box-container">
+        <div class="status-box" id="status-box">
+          <h1 class="title-4xl status-code">{{ status_code.code }}</h1>
+          <h2 class="title-xl">{{ status_code.title }}</h2>
+        </div>
+      </div>
+
+      <section>
+        <div class="container how-to-use-section">
+          <h4 class="title-2xl">نحوه استفاده</h4>
+          <div class="how-to-use-item">
+            <p>
+              با استفاده از url زیر میتونی یک شعر تصادفی از مربوط به وضعیت {{ status_code.code }}
+              دریافت کنی.
+            </p>
+            <div>
+              <input
+                type="text"
+                value="https://http.poems/[status]"
+                class="input-lg how-to-use-input dir-ltr"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="how-to-use-item">
+            <p>
+              برای دریافت یه شعر خاص مربوط به وضعیت {{ status_code.code }} میتونی با استفاده از uid
+              اون شعر به صورت زیر دریافتش کنی.
+            </p>
+            <div>
+              <input
+                type="text"
+                value="https://http.poems/[status]/[uid]"
+                class="input-lg how-to-use-input dir-ltr"
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container cards-section">
+          <h4 class="title-2xl">لیست اشعار</h4>
+          <div class="cards-grid">
+           {% for poem in poems %}
+            <div class="main-card-container">
+              <div class="main-card" id="{{ poem.uid }}">
+                <p class="content-md poem-item">{{ poem.lyric }}</p>
+                <div class="card-poet-name">
+                  <p>{{ poem.poet }}</p>
+                </div>
+                <div class="card-info">
+                  <p class="title-base">UID:</p>
+                  <p class="title-base id-content">{{ poem.uid }}</p>
+                </div>
+              </div>
+            </div>
+           {% endfor %}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer">
+        <div class="footer-left">
+          <div class="footer-img">
+            <img
+              src="../assets/images/logo-white-48.png"
+              alt="Vaziatnameh Logo"
+            />
+          </div>
+          <p class="content-sm">
+            Made with ♥ by
+            <a
+              href="https://github.com/javadnikbakht"
+              target="_blank"
+              class="title-sm"
+              >@JavadNikbakht</a
+            >
+            &
+            <a
+              href="https://github.com/alieabbasi"
+              target="_blank"
+              class="title-sm"
+              >@alieabbasi</a
+            >
+            .
+          </p>
+        </div>
+        <div class="footer-right">
+          <a href="#" class="footer-social-item">
+            <img src="../assets/images/linkedin.svg" alt="" />
+          </a>
+          <a href="#" class="footer-social-item">
+            <img src="../assets/images/twitter.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../js/toastify.js"></script>
+  <script>
+    const cards = document.querySelectorAll(".main-card");
+    const force = 80;
+    cards.forEach((cardEl) => {
+      cardEl.addEventListener("click", () => {
+        const id = cardEl.id;
+        if (id) {
+          navigator.clipboard.writeText(id);
+          const toast = Toastify({
+            text: `آی‌دی ${id} کپی شد.`,
+            duration: 3000,
+            onClick: () => toast.hideToast(),
+          });
+          toast.showToast();
+        }
+      });
+
+      cardEl.addEventListener("mousemove", function (e) {
+        const boundings = cardEl.getBoundingClientRect();
+        const offsetX =
+          -(e.clientX - boundings.left - boundings.width / 2) / force / 3;
+        const offsetY =
+          (e.clientY - boundings.top - boundings.height / 2) / force;
+        // console.log(boundings.height / 2, e.clientY - boundings.top)
+        cardEl.style.transform = `rotateX(${offsetY}deg) rotateY(${offsetX}deg)`;
+      });
+
+      cardEl.addEventListener("mouseleave", function (e) {
+        cardEl.style.transform = "rotateX(0) rotateY(0)";
+      });
+    });
+
+    function menuToggler() {
+      document.getElementById("nav-icon1").classList.toggle("open");
+      document.getElementById("header-mobile-nav").classList.toggle("open");
+      document.body.classList.toggle("fixed-position");
+    }
+    document.getElementById("nav-icon1").addEventListener("click", menuToggler);
+  </script>
 </html>
