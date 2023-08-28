@@ -37,7 +37,7 @@
               </ul>
             </nav>
             <div class="header-img">
-              <img src="../assets/images/logo-48.png" alt="Vaziatnameh Logo" />
+              <img src="{% static 'assets/images/logo-48.png' %}" alt="Vaziatnameh Logo" />
             </div>
             <h1 class="header-title title-2xl">وضعیت‌نامه</h1>
             <nav class="header-desktop-nav">
@@ -79,7 +79,7 @@
             </a>
           </div>
           <div class="banner-left">
-            <img src="../assets/images/main-banner.jpeg" alt="" />
+            <img src="{% static 'assets/images/main-banner.jpeg' %}" alt="" />
           </div>
         </div>
       </section>
@@ -123,7 +123,7 @@
            {% for card in cards %}
             <div class="main-card-container">
               <div class="main-card">
-                <a href="../statuspage/index.html">
+                <a href="{{ card.status_code }}">
                   <p class="content-md poem-item">
                       {{ card.lyric }}
                   </p>
@@ -163,7 +163,7 @@
         <div class="footer-left">
           <div class="footer-img">
             <img
-              src="../assets/images/logo-white-48.png"
+              src="{% static 'assets/images/logo-white-48.png' %}"
               alt="Vaziatnameh Logo"
             />
           </div>
@@ -187,10 +187,10 @@
         </div>
         <div class="footer-right">
           <a href="#" class="footer-social-item">
-            <img src="../assets/images/linkedin.svg" alt="" />
+            <img src="{% static 'assets/images/linkedin.svg' %}" alt="" />
           </a>
           <a href="#" class="footer-social-item">
-            <img src="../assets/images/twitter.svg" alt="" />
+            <img src="{% static 'assets/images/twitter.svg' %}" alt="" />
           </a>
         </div>
       </div>

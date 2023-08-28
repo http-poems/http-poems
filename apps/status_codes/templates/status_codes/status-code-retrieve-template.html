@@ -37,7 +37,7 @@
               </ul>
             </nav>
             <div class="header-img">
-              <img src="../assets/images/logo-48.png" alt="Vaziatnameh Logo" />
+              <img src="{% static 'assets/images/logo-48.png' %}" alt="Vaziatnameh Logo" />
             </div>
             <h1 class="header-title title-2xl">وضعیت‌نامه</h1>
             <nav class="header-desktop-nav">
@@ -134,8 +134,7 @@
         <div class="footer-left">
           <div class="footer-img">
             <img
-              src="../assets/images/logo-white-48.png"
-              alt="Vaziatnameh Logo"
+              src="{% static 'assets/images/logo-white-48.png' %}"
             />
           </div>
           <p class="content-sm">
@@ -158,16 +157,16 @@
         </div>
         <div class="footer-right">
           <a href="#" class="footer-social-item">
-            <img src="../assets/images/linkedin.svg" alt="" />
+            <img src="{% static 'assets/images/linkedin.svg' %}" alt="" />
           </a>
           <a href="#" class="footer-social-item">
-            <img src="../assets/images/twitter.svg" alt="" />
+            <img src="{% static 'assets/images/twitter.svg' %}" alt="" />
           </a>
         </div>
       </div>
     </footer>
   </body>
-  <script src="../js/toastify.js"></script>
+  <script src="{% static 'js/toastify.js' %}"></script>
   <script>
     const cards = document.querySelectorAll(".main-card");
     const force = 80;
@@ -177,7 +176,7 @@
         if (id) {
           navigator.clipboard.writeText(id);
           const toast = Toastify({
-            text: `آی‌دی ${id} کپی شد.`,
+            text: `آیدی ${id} کپی شد.`,
             duration: 3000,
             onClick: () => toast.hideToast(),
           });
