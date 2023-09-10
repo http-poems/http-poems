@@ -13,7 +13,7 @@ from apps.utils.functions import get_repo_contributors
 
 class HomePageView(generics.ListAPIView):
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = "status_codes/status-code-list-template.html"
+    template_name = "utils/index.html"
 
     queryset = (
         Poem.objects.annotate(
