@@ -35,7 +35,7 @@ urlpatterns = [
     path(
         "",
         HomePageView.as_view(),
-        name="status-code-list-template",
+        name="homepage",
     ),
     path(
         "<int:code>",
