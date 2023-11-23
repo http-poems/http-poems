@@ -18,7 +18,7 @@ idna==3.4
     # via requests
 pillow==9.4.0
     # via -r requirements/base.in
-psycopg2==2.9.5
+psycopg2-binary==2.9.9
     # via -r requirements/base.in
 python-decouple==3.8
     # via -r requirements/base.in
