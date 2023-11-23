@@ -26,9 +26,9 @@ packaging==23.0
     # via build
 pillow==9.4.0
     # via -r requirements/base.in
-pip-tools==6.12.3
+pip-tools==7.3.0
     # via -r requirements/dev.in
-psycopg2==2.9.5
+psycopg2-binary==2.9.9
     # via -r requirements/base.in
 pyproject-hooks==1.0.0
     # via build
