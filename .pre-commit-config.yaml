@@ -26,7 +26,7 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.6.0
     hooks:
       # See https://pre-commit.com/hooks.html for more hooks
       - id: check-merge-conflict # checks for files that contain merge conflict strings.
@@ -92,7 +92,7 @@ repos:
         stages: [ push ]
 
   - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: "v2.2.0"
+    rev: "v2.5.0"
     hooks:
       - id: setup-cfg-fmt
         args: [ --include-version-classifiers, --max-py-version=3.11 ]
@@ -106,7 +106,7 @@ repos:
 
 
   - repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
+    rev: 7.0.0
     hooks:
       - id: flake8
         args: [ --config, setup.cfg ]
@@ -115,7 +115,7 @@ repos:
   # Python security check
   # https://bandit.readthedocs.io/en/latest/
   - repo: https://github.com/pycqa/bandit
-    rev: 1.7.5
+    rev: 1.7.8
     hooks:
       - id: bandit
         stages: [ push ]
