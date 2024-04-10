@@ -3,12 +3,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>وضعیت نامه | وضعیت {{ status_code.code }}</title>
+    <title>وضعیت‌نامه</title>
     <link rel="stylesheet" href="{% static 'css/global.style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/shared.style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/statuspage.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/toastify.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
   </head>
   <body>
     <header>
@@ -63,22 +63,33 @@
         </div>
       </div>
     </header>
-
     <main>
-      <div class="status-box-container">
-        <div class="status-box" id="status-box">
-          <h1 class="title-4xl status-code">{{ status_code.code }}</h1>
-          <h2 class="title-xl">{{ status_code.title }}</h2>
+      <section>
+        <div class="container banner-section">
+          <div class="banner-right">
+            <h2 class="title-3xl banner-h2">وضعیت HTTP بده، شعر مرتبط بگیر!</h2>
+            <p class="content-base banner-description">
+              با سرویس وضعیت‌نامه میتونی به ازای وضعیت های مختلف http، شعر های
+              فارسی مرتبط با اون وضعیت رو دریافت کنی.
+            </p>
+            <a href="../suggestpage/index.html">
+              <button class="btn-prm btn-lg banner-btn">
+                شعر پیشنهادی خودت رو برامون بفرست >
+              </button>
+            </a>
+          </div>
+          <div class="banner-left">
+            <img src="{% static 'assets/images/main-banner.jpeg' %}" alt="" />
+          </div>
         </div>
-      </div>
-
+      </section>
       <section>
         <div class="container how-to-use-section">
           <h4 class="title-2xl">نحوه استفاده</h4>
           <div class="how-to-use-item">
             <p>
-              با استفاده از url زیر میتونی یک شعر تصادفی از مربوط به وضعیت {{ status_code.code }}
-              دریافت کنی.
+              با استفاده از این url میتونی یک شعر تصادفی مربوط به وضعیت مورد
+              نظرت دریافت کنی.
             </p>
             <div>
               <input
@@ -91,7 +102,7 @@
           </div>
           <div class="how-to-use-item">
             <p>
-              برای دریافت یه شعر خاص مربوط به وضعیت {{ status_code.code }} میتونی با استفاده از uid
+              همچنین برای دریافت یه شعر خاص مربوط به یه استاتوس میتونی با استفاده از id
               اون شعر به صورت زیر دریافتش کنی.
             </p>
             <div>
@@ -105,36 +116,55 @@
           </div>
         </div>
       </section>
-
       <section>
         <div class="container cards-section">
-          <h4 class="title-2xl">لیست اشعار</h4>
+          <h4 class="title-2xl">وضعیت‌های HTTP</h4>
           <div class="cards-grid">
-           {% for poem in poems %}
+           {% for card in cards %}
             <div class="main-card-container">
-              <div class="main-card" id="{{ poem.uid }}">
-                <p class="content-md poem-item">{{ poem.lyric }}</p>
-                <div class="card-poet-name">
-                  <p>{{ poem.poet }}</p>
-                </div>
-                <div class="card-info">
-                  <p class="title-base">UID:</p>
-                  <p class="title-base id-content">{{ poem.uid }}</p>
-                </div>
+              <div class="main-card">
+                <a href="{{ card.status_code }}">
+                  <p class="content-md poem-item">
+                      {{ card.lyric }}
+                  </p>
+                  <div class="card-poet-name">
+                    <p>{{ card.poet_name }}</p>
+                  </div>
+                  <div class="card-info">
+                    <p class="title-base">{{ card.status_code }}</p>
+                    <p class="title-base">{{ card.status_code_title }}</p>
+                  </div>
+                </a>
               </div>
             </div>
            {% endfor %}
           </div>
         </div>
       </section>
+      <section>
+        <div class="container contributers">
+          <h4 class="title-2xl">مشارکت کنندگان</h4>
+          <div class="contributers-profiles">
+           {% for contributor in contributors %}
+            <a
+              href={{ contributor.html_url }}
+              target="_blank"
+              class="profile-img"
+            >
+              <img src={{ contributor.avatar_url }} alt="" />
+            </a>
+           {% endfor %}
+          </div>
+        </div>
+      </section>
     </main>
-
     <footer>
       <div class="container footer">
         <div class="footer-left">
           <div class="footer-img">
             <img
               src="{% static 'assets/images/logo-white-48.png' %}"
+              alt="Vaziatnameh Logo"
             />
           </div>
           <p class="content-sm">
@@ -165,45 +195,33 @@
         </div>
       </div>
     </footer>
+    <script>
+      function menuToggler() {
+        document.getElementById("nav-icon1").classList.toggle("open");
+        document.getElementById("header-mobile-nav").classList.toggle("open");
+        document.body.classList.toggle("fixed-position");
+      }
+      document
+        .getElementById("nav-icon1")
+        .addEventListener("click", menuToggler);
+
+      const cards = document.querySelectorAll(".main-card");
+      const force = 80;
+      for (let card of cards) {
+        card.addEventListener("mousemove", function (e) {
+          const boundings = card.getBoundingClientRect();
+          const offsetX =
+            -(e.clientX - boundings.left - boundings.width / 2) / force / 3;
+          const offsetY =
+            (e.clientY - boundings.top - boundings.height / 2) / force;
+          // console.log(boundings.height / 2, e.clientY - boundings.top)
+          card.style.transform = `rotateX(${offsetY}deg) rotateY(${offsetX}deg)`;
+        });
+
+        card.addEventListener("mouseleave", function(e) {
+          card.style.transform = "rotateX(0) rotateY(0)"
+        })
+      }
+    </script>
   </body>
-  <script src="{% static 'js/toastify.js' %}"></script>
-  <script>
-    const cards = document.querySelectorAll(".main-card");
-    const force = 80;
-    cards.forEach((cardEl) => {
-      cardEl.addEventListener("click", () => {
-        const id = cardEl.id;
-        if (id) {
-          navigator.clipboard.writeText(id);
-          const toast = Toastify({
-            text: `آیدی ${id} کپی شد.`,
-            duration: 3000,
-            onClick: () => toast.hideToast(),
-          });
-          toast.showToast();
-        }
-      });
-
-      cardEl.addEventListener("mousemove", function (e) {
-        const boundings = cardEl.getBoundingClientRect();
-        const offsetX =
-          -(e.clientX - boundings.left - boundings.width / 2) / force / 3;
-        const offsetY =
-          (e.clientY - boundings.top - boundings.height / 2) / force;
-        // console.log(boundings.height / 2, e.clientY - boundings.top)
-        cardEl.style.transform = `rotateX(${offsetY}deg) rotateY(${offsetX}deg)`;
-      });
-
-      cardEl.addEventListener("mouseleave", function (e) {
-        cardEl.style.transform = "rotateX(0) rotateY(0)";
-      });
-    });
-
-    function menuToggler() {
-      document.getElementById("nav-icon1").classList.toggle("open");
-      document.getElementById("header-mobile-nav").classList.toggle("open");
-      document.body.classList.toggle("fixed-position");
-    }
-    document.getElementById("nav-icon1").addEventListener("click", menuToggler);
-  </script>
 </html>

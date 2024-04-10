@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.status_codes.views import (
+from apps.status_codes.views.api import (
     StatusCodeListAPIView,
     StatusCodeRetrieveAPIView,
 )

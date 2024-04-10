@@ -1,0 +1,45 @@
+.status-box-container {
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-box {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  padding: 1.5rem;
+  margin: 1rem;
+  background-image: radial-gradient(var(--HP-50), var(--HP-100));
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  transition-duration: 100ms;
+}
+
+.status-code {
+  background-image: linear-gradient(45deg, var(--HP-400), var(--HP-900), var(--HP-400));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  .status-box-container {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .status-box-container {
+    margin-top: 2rem;
+  }
+}
