@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "apps.poets.apps.PoetsConfig",
     "apps.status_codes.apps.StatusCodesConfig",
     "apps.utils.apps.UtilsConfig",
+    "apps.suggestions.apps.SuggestionsConfig",
 ]
 
 MIDDLEWARE = [
