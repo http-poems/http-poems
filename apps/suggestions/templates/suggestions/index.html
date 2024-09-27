@@ -1,0 +1,152 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پیشنهاد شعر</title>
+    <link rel="stylesheet" href="{% static 'css/global.style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/shared.style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/suggestpage.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="header-logo-and-nav">
+            <div id="nav-icon1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <nav class="header-mobile-nav" id="header-mobile-nav">
+              <ul class="nav-mobile-list">
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">صفحه اصلی</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">وضعیت‌های HTTP</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">نحوه استفاده</a>
+                </li>
+                <li class="content-lg nav-mobile-item">
+                  <a href="#">درباره ما</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header-img">
+              <img src="../assets/images/logo-48.png" alt="Vaziatnameh Logo" />
+            </div>
+            <h1 class="header-title title-2xl">وضعیت‌نامه</h1>
+            <nav class="header-desktop-nav">
+              <ul class="nav-bar-list">
+                <li class="content-lg nav-item">
+                  <a href="#">صفحه اصلی</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">وضعیت‌های HTTP</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">نحوه استفاده</a>
+                </li>
+                <li class="content-lg nav-item">
+                  <a href="#">درباره ما</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <button class="btn-out btn-lg header-btn">پیشنهاد شعر</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <form class="suggestion-form" method="post" action="index.html">
+          <h2 class="title-3xl">پیشنهاد شعر</h2>
+          <p class="content-base">
+            شعر مورد نظرت رو پیشنهاد بده تا ما اون رو به لیست خودمون اضافه کنیم.
+          </p>
+          <div class="input-set">
+            <label for="status-input" class="title-lg">وضعیت</label>
+            <input
+              type="number"
+              name="status"
+              id="status-input"
+              class="input-md dir-ltr input-full"
+              placeholder="201"
+              required
+            />
+          </div>
+          <div class="input-set">
+            <label for="poet-input" class="title-lg">شاعر</label>
+            <input
+              type="text"
+              name="poet"
+              id="poet-input"
+              class="input-md input-full"
+              placeholder="سعدی"
+              required
+            />
+          </div>
+          <div class="input-set">
+            <label for="poem-input" class="title-lg">شعر</label>
+            <textarea
+              name="poem"
+              id="poem-input"
+              class="input-md"
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn-scn btn-lg btn-full suggestion-submit"
+          >
+            ارسال
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer">
+        <div class="footer-left">
+          <div class="footer-img">
+            <img
+              src="../assets/images/logo-white-48.png"
+              alt="Vaziatnameh Logo"
+            />
+          </div>
+          <p class="content-sm">
+            Made with ♥ by
+            <a
+              href="https://github.com/http-poems"
+              target="_blank"
+              class="title-sm"
+              >Http-Poems</a
+            >
+            .
+          </p>
+        </div>
+        <div class="footer-right">
+          <a href="#" class="footer-social-item">
+            <img src="../assets/images/linkedin.svg" alt="" />
+          </a>
+          <a href="#" class="footer-social-item">
+            <img src="../assets/images/twitter.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function menuToggler() {
+        document.getElementById("nav-icon1").classList.toggle("open");
+        document.getElementById("header-mobile-nav").classList.toggle("open");
+        document.body.classList.toggle("fixed-position");
+      }
+      document
+        .getElementById("nav-icon1")
+        .addEventListener("click", menuToggler);
+    </script>
+  </body>
+</html>

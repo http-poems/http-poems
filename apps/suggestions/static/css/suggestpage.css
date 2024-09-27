@@ -1,0 +1,47 @@
+.suggestion-form {
+  width: 100%;
+  max-width: 520px;
+  min-height: calc(100vh - 344px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.suggestion-form > *:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.input-set {
+  width: 100%;
+}
+
+.input-set textarea {
+  width: 100%;
+  height: auto;
+  min-height: 96px;
+  resize: vertical;
+}
+
+.input-set input {
+  margin-top: 0.75rem;
+}
+
+.suggestion-form > button.suggestion-submit {
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .suggestion-form {
+    min-height: calc(100vh - 312px);
+  }
+}
+
+@media (max-width: 640px) {
+  .suggestion-form {
+    min-height: calc(100vh - 242px);
+  }
+}
