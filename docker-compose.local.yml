@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  db:
+    container_name: http_poems_db
+    image: postgres:13.3
+    environment:
+      - POSTGRES_DB=http_poems
+      - POSTGRES_USER=http_poems_user
+      - POSTGRES_PASSWORD=http_poems_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+volumes:
+  postgres_data:
+
