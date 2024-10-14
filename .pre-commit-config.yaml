@@ -6,7 +6,7 @@
 
 # See https://pre-commit.com for more information
 exclude: "^docs/|/migrations/"
-default_stages: [ commit ]
+default_stages: [ pre-commit ]
 
 default_language_version:
   # default language version for each language used in the repository
@@ -26,32 +26,32 @@ ci:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       # See https://pre-commit.com/hooks.html for more hooks
       - id: check-merge-conflict # checks for files that contain merge conflict strings.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: check-executables-have-shebangs # ensures that (non-binary) executables have a shebang.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: check-shebang-scripts-are-executable # ensures that (non-binary) files with a shebang are executable.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: check-added-large-files # prevents giant files from being committed.
         args: [ '--maxkb=1000' ]
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: debug-statements # Check for debugger imports and py37+ `breakpoint()` calls in python source.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: detect-private-key # Detects the presence of private keys.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: end-of-file-fixer # Makes sure files end in a newline and only a newline.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: check-ast  # Simply checks whether the files parse as valid python.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: check-json # Checks json files and verifies them
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: check-yaml # Checks yaml files for parseable syntax.
-        stages: [ push ]
+        stages: [ pre-push ]
       - id: check-toml # Attempts to load all TOML files to verify syntax.
-        stages: [ push ]
+        stages: [ pre-push ]
 
 
   - repo: local
@@ -65,7 +65,7 @@ repos:
           - python
         pass_filenames: false
         language: system
-        stages: [ push ]
+        stages: [ pre-push ]
 
 
       - id: django-check-migrations
@@ -77,7 +77,7 @@ repos:
           - python
         pass_filenames: false
         language: system
-        stages: [ push ]
+        stages: [ pre-push ]
 
 
 
@@ -89,10 +89,10 @@ repos:
           - python
         pass_filenames: false
         language: system
-        stages: [ push ]
+        stages: [ pre-push ]
 
   - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: "v2.5.0"
+    rev: "v2.7.0"
     hooks:
       - id: setup-cfg-fmt
         args: [ --include-version-classifiers, --max-py-version=3.11 ]
@@ -118,6 +118,6 @@ repos:
     rev: 1.7.10
     hooks:
       - id: bandit
-        stages: [ push ]
+        stages: [ pre-push ]
         args: [ --exclude, ./venv/, -r, -iii, -ll , . ]
         additional_dependencies: [ "bandit[toml]" ]
